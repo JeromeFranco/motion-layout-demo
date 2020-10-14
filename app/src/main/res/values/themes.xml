@@ -1,0 +1,15 @@
+<resources>
+    <style name="Theme" parent="Theme.MaterialComponents.Light.NoActionBar" />
+
+    <!-- Base application theme. -->
+    <style name="Theme.MusicPlaylist">
+        <item name="android:windowBackground">@color/neutral_100</item>
+        <item name="android:windowLightStatusBar">true</item>
+        
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/neutral_100</item>
+        <item name="colorPrimaryDark">@color/neutral_100</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>
