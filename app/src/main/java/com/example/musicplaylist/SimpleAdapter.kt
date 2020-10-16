@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class SimpleAdapter(private val items: List<String>) : RecyclerView.Adapter<SimpleAdapter.ViewHolder>() {
@@ -21,6 +23,12 @@ class SimpleAdapter(private val items: List<String>) : RecyclerView.Adapter<Simp
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.text = items[position]
         holder.text2 = items[position]
+    }
+
+
+    override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
+        recyclerView.layoutManager =
+            LinearLayoutManager(recyclerView.context, LinearLayoutManager.VERTICAL, false)
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
