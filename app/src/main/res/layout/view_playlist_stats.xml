@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_thumb_up_12"
+        android:drawableTint="@color/neutral_500"
+        android:text=" 9,435"
+        android:textAppearance="?textAppearanceCaption"
+        android:textColor="@color/neutral_500" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" • "
+        android:textAppearance="?textAppearanceCaption"
+        android:textColor="@color/neutral_500" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_baseline_timer_14"
+        android:drawableTint="@color/neutral_500"
+        android:text=" 5h 30m"
+        android:textAppearance="?textAppearanceCaption"
+        android:textColor="@color/neutral_500" />
+
+</LinearLayout>

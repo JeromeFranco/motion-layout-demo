@@ -3,12 +3,12 @@
 
     <!-- Base application theme. -->
     <style name="Theme.MusicPlaylist">
-        <item name="android:windowBackground">@color/neutral_100</item>
+        <item name="android:windowBackground">@color/neutral_000</item>
         <item name="android:windowLightStatusBar">true</item>
         
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/neutral_100</item>
-        <item name="colorPrimaryDark">@color/neutral_100</item>
+        <item name="colorPrimary">@color/neutral_000</item>
+        <item name="colorPrimaryDark">@color/neutral_000</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
