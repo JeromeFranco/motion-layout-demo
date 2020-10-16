@@ -3,7 +3,17 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-
-    <color name="neutral_100">#f2f2f4</color>
+    <color name="yellow">#F9B52B</color>
     <color name="dark">#080503</color>
+    <color name="dark_30">#4D080503</color>
+
+    <color name="neutral_900">#04060c</color>
+    <color name="neutral_700">#484a50</color>
+    <color name="neutral_500">#6c6e74</color>
+    <color name="neutral_400">#c8c8c8</color>
+    <color name="neutral_300">#d8dae0</color>
+    <color name="neutral_200">#F8F8FA</color>
+    <color name="neutral_100">#f2f2f4</color>
+    <color name="neutral_000">#ffffff</color>
+
 </resources>

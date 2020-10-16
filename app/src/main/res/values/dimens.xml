@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="play_list_card">390dp</dimen>
+    <dimen name="play_list_header">500dp</dimen>
+    <dimen name="play_list_header_collapsed">105dp</dimen>
+    <dimen name="play_list_card_img_height">260dp</dimen>
+    <dimen name="play_list_card_img_width">162dp</dimen>
+    <dimen name="design_fab_size_normal">58dp</dimen>
+    <dimen name="design_fab_size_mini">36dp</dimen>
+</resources>

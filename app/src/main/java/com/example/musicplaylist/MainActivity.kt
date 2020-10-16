@@ -10,28 +10,38 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    private val items = (1..20).map { "item $it" }
+    private val items = (1..20).map { "Song $it" }
     private val adapter = SimpleAdapter(items)
-    var rebuilt = false
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         songList.adapter = adapter
-        songList.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+
+        backButton.setOnClickListener {
+            root.setTransition(R.id.startToMiddle)
+            root.transitionToStart()
+        }
 
         root.setTransitionListener(object : TransitionAdapter() {
+            override fun onTransitionStarted(
+                motionLayout: MotionLayout?,
+                startId: Int,
+                endId: Int
+            ) {
+                if (startId == R.id.start) {
+                    window.statusBarColor = resources.getColor(R.color.neutral_000)
+                }
+            }
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
                 if (currentId == R.id.middle) {
+                    window.statusBarColor = resources.getColor(R.color.yellow)
                     root.postDelayed({
                         root.setTransition(R.id.middleToEnd)
                     }, 500)
                 }
             }
-
-
         })
     }
 }
