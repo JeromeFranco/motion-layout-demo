@@ -102,8 +102,8 @@
 
     <ImageView
         android:id="@+id/playlistImg"
-        android:layout_width="180dp"
-        android:layout_height="280dp"
+        android:layout_width="@dimen/play_list_card_img_width"
+        android:layout_height="@dimen/play_list_card_img_height"
         android:contentDescription="playlist"
         android:src="@drawable/ambient"
         app:layout_constraintBottom_toBottomOf="@id/playlistOne"
