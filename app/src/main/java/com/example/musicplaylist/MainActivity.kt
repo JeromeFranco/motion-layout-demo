@@ -26,11 +26,9 @@ class MainActivity : AppCompatActivity() {
                     window.statusBarColor = resources.getColor(R.color.neutral_000)
                 }
             }
-
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
                 if (currentId == R.id.middle && motionLayout?.progress == 1f) {
                     window.statusBarColor = resources.getColor(R.color.yellow)
-                    root.setTransition(R.id.middleToEnd)
                 }
             }
         })
