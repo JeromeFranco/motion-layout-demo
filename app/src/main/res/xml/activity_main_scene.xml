@@ -3,7 +3,7 @@
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetEnd="@+id/middle"
         motion:constraintSetStart="@id/start"
         motion:duration="1000">
         <KeyFrameSet></KeyFrameSet>
@@ -150,6 +150,111 @@
             motion:layout_constraintTop_toTopOf="@+id/playlistOne" />
     </ConstraintSet>
 
-    <ConstraintSet android:id="@+id/end" />
+    <ConstraintSet
+        android:id="@+id/middle"
+        motion:deriveConstraintsFrom="@id/start">
+        <Constraint
+            android:id="@id/playlistOne"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/play_list_header"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@id/songList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/playlistOne" />
+        <Constraint
+            android:id="@+id/downloadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="@+id/blockButton"
+            motion:layout_constraintEnd_toStartOf="@+id/blockButton"
+            motion:layout_constraintHorizontal_chainStyle="packed"
+            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintTop_toTopOf="@+id/blockButton" />
+        <Constraint
+            android:id="@+id/moreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="@+id/playButton"
+            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
+            motion:layout_constraintStart_toEndOf="@id/likeButton"
+            motion:layout_constraintTop_toTopOf="@+id/playButton" />
+        <Constraint
+            android:id="@+id/userAvatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="14dp"
+            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
+            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintTop_toTopOf="@id/playlistOne" />
+        <Constraint
+            android:id="@+id/playlistCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
+            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintTop_toBottomOf="@id/userAvatar" />
+        <Constraint
+            android:id="@+id/playlistDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
+            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintTop_toBottomOf="@id/playlistCategory" />
+        <Constraint
+            android:id="@+id/plusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="0.45"
+            android:scaleY="0.45"
+            android:translationX="-30dp"
+            android:translationY="18dp"
+            motion:layout_constraintBottom_toBottomOf="@id/userAvatar"
+            motion:layout_constraintStart_toEndOf="@id/userAvatar" />
+        <Constraint
+            android:id="@+id/playlistTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
+            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintTop_toBottomOf="@id/playlistDate" />
+        <Constraint
+            android:id="@+id/playlistDesc"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:alpha="1"
+            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
+            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintTop_toBottomOf="@id/playlistSubTitle" />
+        <Constraint
+            android:id="@+id/playlistImg"
+            android:layout_width="168dp"
+            android:layout_height="270dp"
+            motion:layout_constraintBottom_toBottomOf="@id/playlistOne"
+            motion:layout_constraintEnd_toEndOf="@+id/playlistOne"
+            motion:layout_constraintStart_toStartOf="@id/playlistOne" />
+        <Constraint
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintTop_toTopOf="@+id/playlistOne" />
+    </ConstraintSet>
 
 </MotionScene>
