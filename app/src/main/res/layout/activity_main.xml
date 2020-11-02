@@ -91,7 +91,7 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/playlistDesc"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Beautiful, dreamy and dramatic instrumental classical piano scores from movies and tv series."
         android:textAlignment="center"
