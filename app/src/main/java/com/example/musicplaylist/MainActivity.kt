@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
             override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
                 if (currentId == R.id.middle && motionLayout?.progress == 1f) {
                     window.statusBarColor = resources.getColor(R.color.yellow)
+                    // Workaround to fix issue where scrolling the recycle view doesn't trigger the transition
                     root.setTransition(R.id.middleToEnd)
                 }
             }
