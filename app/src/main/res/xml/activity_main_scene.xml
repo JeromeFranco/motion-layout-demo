@@ -20,25 +20,6 @@
             motion:targetId="@id/backButton" />
     </Transition>
 
-    <Transition
-        android:id="@+id/middleToEnd"
-        motion:constraintSetEnd="@id/end"
-        motion:constraintSetStart="@id/middle">
-        <OnSwipe
-            motion:dragDirection="dragUp"
-            motion:touchAnchorId="@id/playlistOne"
-            motion:touchAnchorSide="bottom" />
-    </Transition>
-
-    <Transition
-        android:id="@+id/endToStart"
-        motion:constraintSetEnd="@id/start"
-        motion:constraintSetStart="@id/end">
-        <OnClick
-            motion:clickAction="transitionToEnd"
-            motion:targetId="@id/backButton" />
-    </Transition>
-
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@id/playlistOne"
