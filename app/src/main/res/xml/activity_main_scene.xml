@@ -28,18 +28,6 @@
             motion:dragDirection="dragUp"
             motion:touchAnchorId="@id/playlistOne"
             motion:touchAnchorSide="bottom" />
-        <KeyFrameSet>
-            <KeyPosition
-                motion:framePosition="30"
-                motion:motionTarget="@+id/playlistImg"
-                motion:percentX="0.85" />
-            <KeyPosition />
-            <KeyAttribute
-                android:scaleX="1"
-                android:scaleY="1"
-                motion:framePosition="70"
-                motion:motionTarget="playListBottomButton" />
-        </KeyFrameSet>
     </Transition>
 
     <Transition
