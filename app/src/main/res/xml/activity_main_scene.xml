@@ -11,7 +11,7 @@
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
-            android:id="@id/playlistOne"
+            android:id="@id/playlistCard"
             android:layout_width="match_parent"
             android:layout_height="@dimen/play_list_card"
             android:layout_marginStart="20dp"
@@ -19,7 +19,11 @@
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+            motion:layout_constraintTop_toTopOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="16dp" />
+        </Constraint>
         <Constraint
             android:id="@id/songList"
             android:layout_width="match_parent"
@@ -27,7 +31,7 @@
             android:visibility="gone"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toBottomOf="@id/playlistOne" />
+            motion:layout_constraintTop_toBottomOf="@id/playlistCard" />
         <Constraint
             android:id="@+id/downloadButton"
             android:layout_width="wrap_content"
@@ -37,7 +41,7 @@
             motion:layout_constraintBottom_toBottomOf="@+id/blockButton"
             motion:layout_constraintEnd_toStartOf="@+id/blockButton"
             motion:layout_constraintHorizontal_chainStyle="packed"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
             motion:layout_constraintTop_toTopOf="@+id/blockButton" />
         <Constraint
             android:id="@+id/moreButton"
@@ -46,7 +50,7 @@
             android:layout_marginStart="20dp"
             android:alpha="0"
             motion:layout_constraintBottom_toBottomOf="@+id/playButton"
-            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
+            motion:layout_constraintEnd_toEndOf="@id/playlistCard"
             motion:layout_constraintStart_toEndOf="@id/likeButton"
             motion:layout_constraintTop_toTopOf="@+id/playButton" />
         <Constraint
@@ -64,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:alpha="1"
-            motion:layout_constraintBottom_toBottomOf="@+id/playlistOne"
+            motion:layout_constraintBottom_toBottomOf="@+id/playlistCard"
             motion:layout_constraintEnd_toStartOf="@+id/likeButton"
             motion:layout_constraintStart_toEndOf="@+id/blockButton" />
         <Constraint
@@ -80,24 +84,24 @@
             android:id="@+id/playlistImg"
             android:layout_width="@dimen/play_list_card_img_width"
             android:layout_height="@dimen/play_list_card_img_height"
-            motion:layout_constraintBottom_toBottomOf="@id/playlistOne"
-            motion:layout_constraintEnd_toEndOf="@+id/playlistOne"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne" />
+            motion:layout_constraintBottom_toBottomOf="@id/playlistCard"
+            motion:layout_constraintEnd_toEndOf="@+id/playlistCard"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard" />
         <Constraint
             android:id="@+id/playlistTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="68dp"
-            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
-            motion:layout_constraintTop_toTopOf="@id/playlistOne" />
+            motion:layout_constraintEnd_toEndOf="@id/playlistCard"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
+            motion:layout_constraintTop_toTopOf="@id/playlistCard" />
         <Constraint
             android:id="@+id/playlistSubTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            motion:layout_constraintEnd_toEndOf="@+id/playlistOne"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintEnd_toEndOf="@+id/playlistCard"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
             motion:layout_constraintTop_toBottomOf="@+id/playlistTitle" />
         <Constraint
             android:id="@+id/userAvatar"
@@ -105,8 +109,8 @@
             android:layout_height="36dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="14dp"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
-            motion:layout_constraintTop_toTopOf="@id/playlistOne" />
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
+            motion:layout_constraintTop_toTopOf="@id/playlistCard" />
         <Constraint
             android:id="@+id/playlistCategory"
             android:layout_width="wrap_content"
@@ -130,38 +134,42 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
-            motion:layout_constraintTop_toTopOf="@+id/playlistOne" />
+            motion:layout_constraintEnd_toEndOf="@id/playlistCard"
+            motion:layout_constraintTop_toTopOf="@+id/playlistCard" />
         <Constraint
             android:id="@+id/playlistDesc"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:alpha="0"
-            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintEnd_toEndOf="@id/playlistCard"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
             motion:layout_constraintTop_toBottomOf="@id/playlistSubTitle" />
         <Constraint
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
-            motion:layout_constraintTop_toTopOf="@+id/playlistOne" />
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
+            motion:layout_constraintTop_toTopOf="@+id/playlistCard" />
     </ConstraintSet>
 
     <ConstraintSet
         android:id="@+id/middle"
         motion:deriveConstraintsFrom="@id/start">
         <Constraint
-            android:id="@id/playlistOne"
+            android:id="@id/playlistCard"
             android:layout_width="match_parent"
             android:layout_height="@dimen/play_list_header"
             android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+            motion:layout_constraintTop_toTopOf="parent" >
+            <CustomAttribute
+                motion:attributeName="radius"
+                motion:customDimension="0dp" />
+        </Constraint>
         <Constraint
             android:id="@id/songList"
             android:layout_width="match_parent"
@@ -169,7 +177,7 @@
             android:visibility="visible"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toBottomOf="@id/playlistOne" />
+            motion:layout_constraintTop_toBottomOf="@id/playlistCard" />
         <Constraint
             android:id="@+id/downloadButton"
             android:layout_width="wrap_content"
@@ -179,7 +187,7 @@
             motion:layout_constraintBottom_toBottomOf="@+id/blockButton"
             motion:layout_constraintEnd_toStartOf="@+id/blockButton"
             motion:layout_constraintHorizontal_chainStyle="packed"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
             motion:layout_constraintTop_toTopOf="@+id/blockButton" />
         <Constraint
             android:id="@+id/moreButton"
@@ -188,7 +196,7 @@
             android:layout_marginStart="20dp"
             android:alpha="1"
             motion:layout_constraintBottom_toBottomOf="@+id/playButton"
-            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
+            motion:layout_constraintEnd_toEndOf="@id/playlistCard"
             motion:layout_constraintStart_toEndOf="@id/likeButton"
             motion:layout_constraintTop_toTopOf="@+id/playButton" />
         <Constraint
@@ -196,23 +204,23 @@
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:layout_marginTop="14dp"
-            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
-            motion:layout_constraintTop_toTopOf="@id/playlistOne" />
+            motion:layout_constraintEnd_toEndOf="@id/playlistCard"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
+            motion:layout_constraintTop_toTopOf="@id/playlistCard" />
         <Constraint
             android:id="@+id/playlistCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintEnd_toEndOf="@id/playlistCard"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
             motion:layout_constraintTop_toBottomOf="@id/userAvatar" />
         <Constraint
             android:id="@+id/playlistDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintEnd_toEndOf="@id/playlistCard"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
             motion:layout_constraintTop_toBottomOf="@id/playlistCategory" />
         <Constraint
             android:id="@+id/plusButton"
@@ -229,8 +237,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
-            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintEnd_toEndOf="@id/playlistCard"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
             motion:layout_constraintTop_toBottomOf="@id/playlistDate" />
         <Constraint
             android:id="@+id/playlistDesc"
@@ -238,23 +246,23 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:alpha="1"
-            motion:layout_constraintEnd_toEndOf="@id/playlistOne"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
+            motion:layout_constraintEnd_toEndOf="@id/playlistCard"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
             motion:layout_constraintTop_toBottomOf="@id/playlistSubTitle" />
         <Constraint
             android:id="@+id/playlistImg"
             android:layout_width="168dp"
             android:layout_height="270dp"
-            motion:layout_constraintBottom_toBottomOf="@id/playlistOne"
-            motion:layout_constraintEnd_toEndOf="@+id/playlistOne"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne" />
+            motion:layout_constraintBottom_toBottomOf="@id/playlistCard"
+            motion:layout_constraintEnd_toEndOf="@+id/playlistCard"
+            motion:layout_constraintStart_toStartOf="@id/playlistCard" />
         <Constraint
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="1"
-            motion:layout_constraintStart_toStartOf="@id/playlistOne"
-            motion:layout_constraintTop_toTopOf="@+id/playlistOne" />
+            motion:layout_constraintStart_toStartOf="@id/playlistCard"
+            motion:layout_constraintTop_toTopOf="@+id/playlistCard" />
     </ConstraintSet>
 
 </MotionScene>
